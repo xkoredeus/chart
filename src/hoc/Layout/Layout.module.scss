@@ -1,0 +1,25 @@
+@import '../../assets/variables';
+@import '../../assets/mixins';
+
+.Layout {
+  min-height: 100vh;
+  background: radial-gradient(277.6% 121.43% at 88.67% -2.46%, #4C49CA 0%, rgba(108, 92, 206, 0) 100%), #A15ECA;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__in {
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: $shd;
+  }
+  main {
+    flex-grow: 1;
+    padding: 30px 0;
+  }
+}

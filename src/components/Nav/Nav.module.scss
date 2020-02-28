@@ -1,0 +1,38 @@
+@import '../../assets/variables';
+@import '../../assets/mixins';
+
+.Nav {
+  display: flex;
+  &__link {
+    position: relative;
+    font-family: $dinbold;
+    font-size: 16px;
+    color: $dark;
+    text-decoration: none;
+    display: inline-block;
+    padding: 30px 0;
+    @include ease;
+    opacity: .5;
+    &:hover {
+      opacity: .8;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: $blue;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.active {
+      opacity: 1;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
